@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication63;
+package Jeopardy;
 
 /**
  *
  * @author kebuac
  */
-public class JavaApplication63 {
+public class Jeopardy {
 
     /**
      * @param args the command line arguments
