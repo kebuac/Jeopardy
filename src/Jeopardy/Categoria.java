@@ -1,5 +1,14 @@
 package Jeopardy;
+import java.util.ArrayList;
 
-public class Categoria {
+
+public abstract class Categoria {
+    private String tema;
+    private ArrayList<Pregunta> preguntas;
+
+    public Categoria() {
+        
+    }
+    
     
 }
