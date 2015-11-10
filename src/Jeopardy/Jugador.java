@@ -25,5 +25,9 @@ public class Jugador {
         this.puntuacion = puntuacion;
     }
     
-    
+    @Override
+    public String toString()
+    {
+        return "El nombre del jugador es: "+nombre+" y su puntuacion es: "+puntuacion;
+    }
 }

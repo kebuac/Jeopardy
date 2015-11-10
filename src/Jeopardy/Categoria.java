@@ -9,6 +9,4 @@ public abstract class Categoria {
     public Categoria() {
         
     }
-    
-    
 }
