@@ -1,6 +1,7 @@
-package Jeopardy;
+package model;
 
-public class Respuesta extends Categoria{
+
+public class Respuesta {
     private String texto;
     private int valor;
 
@@ -8,7 +9,7 @@ public class Respuesta extends Categoria{
         this.texto = texto;
         this.valor = valor;
     }
-
+    
     public String getTexto() {
         return texto;
     }
@@ -16,14 +17,4 @@ public class Respuesta extends Categoria{
     public int getValor() {
         return valor;
     }
-
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
-
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
-    
-    
 }

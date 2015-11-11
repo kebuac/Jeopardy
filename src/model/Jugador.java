@@ -1,8 +1,9 @@
-package Jeopardy;
+package model;
 
 public class Jugador {
     private String nombre;
     private int puntuacion;
+    
 
     public Jugador(String nombre, int puntuacion) {
         this.nombre = nombre;
@@ -16,13 +17,10 @@ public class Jugador {
     public int getPuntuacion() {
         return puntuacion;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
+    
+    public int addPuntuacion()
+    {
+        return this.puntuacion = this.puntuacion + puntuacion;
     }
     
     @Override
