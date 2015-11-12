@@ -4,13 +4,30 @@ import model.Categoria;
 import java.util.ArrayList;
 import model.Pregunta;
 import model.Respuesta;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class OperacionesFicheros {
     
-    public static ArrayList<Categoria> readFileCategoria()
+    private static final String FILENAME1 = "Peliculas.txt";
+    private static final String FILENAME2 = "Series.txt";
+    private static final String FILENAME3 = "Videojuegos.txt";
+    
+    public static ArrayList<Categoria> readFileCategoria()throws IOException, NumberFormatException
     {
         ArrayList<Categoria> auxCategorias = new ArrayList<>();
+        BufferedReader br1, br2, br3;
         
+        br1 = Files.newBufferedReader(Paths.get(FILENAME1), java.nio.charset.StandardCharsets.UTF_8);
+        
+        String linea = br1.readLine();
+
+        while (linea != null) {
+            String[] str = linea.split(";");
+            
+        }
         return auxCategorias;
     }  
     

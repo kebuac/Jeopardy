@@ -1,0 +1,10 @@
+películas;100;Si muerdes la manzana... ¿De que peli es esta frase?Cenicienta;N;Blancanieves;Y;Tiana y el sapo;N;Aladdin;N
+películas;200;¿De que trata la película Origen?;Tsunami;N;II Guerra Mundial;N;Sueños;Y;Zombis;N
+películas;300;¿En que año sucedió la catastrofe del Titanic?1912;Y;1920;N;1987;N;1899;N
+películas;400;¿En que empresa intentan entrar los dos protagonistas en Los Becarios?;Twitter;N;Facebook;N;Yputube;N;Google;Y
+películas;500;¿Que película de disney trata las emociones?;UP;N;Atlantis;N;Tarzan;N;Del revés;Y
+películas;100;¿Que dia de la semana es el de los megaestrenos?Lunes;N;Viernes;N;Miercoles;Y;Sábado;N
+películas;200;¿De que color es el famoso traje de Kill Bill?;Azul;N;Amarillo;Y;Rojo;N;Negro;N
+películas;300;¿Cuál es el nombre de la última peli de dinosaurios?Jurassic Parck;N;Dinosaurus;N;Jurassic World;Y;500AC;N
+películas;400;¿Cuantas películas hay hechas de la saga Torrente?2;N;5;Y;3;N;4;N
+películas;500;¿Cuál es el nombre de la tercera película de la saga Crepúsculo?Crepúsculo 3;N;Luna Nueva;N;Amanecer;N;Eclípse;Y
