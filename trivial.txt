@@ -1,0 +1,20 @@
+cultura popular;100;Baile regional de Cataluña;Chotis;N;Jota;Sardanas;Y;N;Fandango;N
+cultura popular;200;Idiomas oficiales de España;Galego,Català,Valencià,Euskera,Castellano;N;Galego,Català,Valencià,Menorquí,Euskera,Castellano;N;Galego,Català,Euskera,Catellano;Y;Galego,Català,Aranés.Euskera,Catellano;N
+cultura popular;300;La mahonesa le debe su nombre a que ciudad?;Mahon;Y;Mayorca;N;Madrid;N;Murcia;N
+cultura popular;400;Como son conocidos los españoes en sudaemrica?;Gallegos;Y;Catalanes;N;Castellanos;N;Ibericos;N
+cultura popular;500;Forma de comunicacion mediante silvidos autoctona de las Islas Canarias;Silbo Canario;Y;Silbido Canario;N;Silbos;N;Silbo Gomero;Y
+ciencias;100;Cual es el punto de ebullición del agua?;100ºC;Y;120ºC;N;90ºC;N;200ºC;N
+ciencias;200;Como se llama de forma cuotidiana al Massachusett Institute of Technology?;ITM;N;Masachusets Tech;N;MIT;Y;TIM;N
+ciencias;300;Energia acumulada al lanzar un objeto desde cierta altura;Energia Cinética;Energia Potenical;Y;N;Energia Mecánica;N;Energia de Reacción;N
+ciencias;400;Simbolo en la tabla periódica del Hierro;Hi;N;Ag;Hr;NFe;Y
+ciencias;500;Como se llama el metodo para obtener las raíces de un polinomio?;Gauss;N;Ruffini;Y;Ineciacion;N;Trigonometria;N
+geografia;100;Cual es el pico mas alto de España?;El Aneto;N;El Turó del Home;N;El Teide;Y;El Puig Major;N
+geografia;200;Pais con mas superficie del mundo;China;N;Brasil;N;EEUU;N;Rusia;Y
+geografia;300;Por donde pasa el meridiano de Greenwich?;Alemania;N;Austria;N;Suiza;N;España;Y
+geografia;400;Con que paises colinda Francia?;Italia,Suiza,Alemania,España,Andorra,Belgica,Luxemburgo,Monaco;Y;Italia,Suiza,Alemania,España;N;Italia,Suiza,Alemania,España,Andorra,Belgica,Luxemburgo,Monaco,Austria;N;Italia,España,Alemania;N
+geografia;500;Que mar baña la costa de Tailandia?;Oceano Pacifico;N;Mar de China;Y;Mar Mediterraneo;N;Mar Muerto;N
+deporte;100;A que equipo se le llamó por primera vez el "Dream Team"?;Manchester United;Y;Barça;N;Real Madrid;N
+deporte;200;Quien ganó el balon de oro en la temporada 2014?;Messi;Cristiano Ronaldo;Y;N;Xavi;N;Iniesta;N
+deporte;300;En que año tubieron lugar las Olimpiadas en la ciudad de Barcelona?;1993;N;1983;N;1991;N;1992;Y
+deporte;400;Que modalidad de competicion de ski o snow board consiste en realizar saltos en snow parck de gran altura?;Big Air;Y;Big Jump;N;High Jump;High Flight;N
+deporte;500;Ola mundialmente famosa por sus grandes dimensiones y caracteristicas, cuyo nombre coincide con una localidad del Pais Vasco;Mundaka;Y;Zarautz;N;Tarifa;Las Dunas;N

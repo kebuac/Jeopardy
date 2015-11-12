@@ -3,9 +3,9 @@ package model;
 
 public class Respuesta {
     private String texto;
-    private int valor;
+    private char valor;
 
-    public Respuesta(String texto, int valor) {
+    public Respuesta(String texto, char valor) {
         this.texto = texto;
         this.valor = valor;
     }
@@ -14,7 +14,7 @@ public class Respuesta {
         return texto;
     }
 
-    public int getValor() {
+    public char getValor() {
         return valor;
     }
 }

@@ -1,6 +1,5 @@
 package auxiliar;
 
-import model.Categoria;
 import java.util.ArrayList;
 import model.Pregunta;
 import model.Respuesta;
@@ -11,52 +10,50 @@ import java.nio.file.Paths;
 
 public class OperacionesFicheros {
     
-    private static final String FILENAME1 = "Peliculas.txt";
-    private static final String FILENAME2 = "Series.txt";
-    private static final String FILENAME3 = "Videojuegos.txt";
-    
-    public static ArrayList<Categoria> readFileCategoria()throws IOException, NumberFormatException
+    public static ArrayList<Pregunta> readFileCategoria(String filename, ArrayList<Pregunta> auxPreguntas)throws IOException, NumberFormatException
     {
-        ArrayList<Categoria> auxCategorias = new ArrayList<>();
-        BufferedReader br1, br2, br3;
         
-        br1 = Files.newBufferedReader(Paths.get(FILENAME1), java.nio.charset.StandardCharsets.UTF_8);
-        
-        String linea = br1.readLine();
-
-        while (linea != null) {
-            String[] str = linea.split(";");
+            if (auxPreguntas == null)
+            {
+                auxPreguntas = new ArrayList<>();
+            }
             
-        }
-        return auxCategorias;
-    }  
-    
-    public static ArrayList<Pregunta> readFilePregunta()
-    {
-        ArrayList<Pregunta> auxPreguntas = new ArrayList<>();
-        
+            BufferedReader br = null;
+            try {
+            br = Files.newBufferedReader(Paths.get(filename), java.nio.charset.StandardCharsets.UTF_8);
+            
+            String linea = br.readLine();
+            
+            while (linea != null) {
+                String[] str = linea.split(";");
+                ArrayList<Respuesta> auxRespuestas = new ArrayList<>();
+                Respuesta respuesta;
+                respuesta = new Respuesta(str[3], str[4].charAt(0));
+                auxRespuestas.add(respuesta);
+                respuesta = new Respuesta(str[5], str[6].charAt(0));
+                auxRespuestas.add(respuesta);
+                respuesta = new Respuesta(str[7], str[8].charAt(0));
+                auxRespuestas.add(respuesta);
+                respuesta = new Respuesta(str[9], str[10].charAt(0));
+                auxRespuestas.add(respuesta);
+                Pregunta pregunta = new Pregunta(str[0], str[2], Integer.parseInt(str[1]), auxRespuestas);
+                auxPreguntas.add(pregunta);
+                linea = br.readLine();
+            }
+            
+        } catch (IOException|NumberFormatException ex) {
+            System.out.println("Error: no se ha podido leer el archivo: " +ex.getMessage());
+        } finally {
+               try{
+                   if (br!= null)
+                   {
+                       br.close();
+                   }
+               }catch (IOException ex)
+               {
+                   System.out.println("Error: no se ha podido cerrar el BufferedReader " +ex.getMessage());
+               }
+            }
         return auxPreguntas;
-    }
-    public static ArrayList<Respuesta> readFileRespuesta()
-    {
-        ArrayList<Respuesta> auxRespuestas = new ArrayList<>();
-        
-        return auxRespuestas;
-    }
-    
-    public static void writeFileCategoria(ArrayList<Categoria> categorias, ArrayList<Pregunta> preguntas, ArrayList<Respuesta> respuestas)
-    {
-        
-    }
-    
-    public static void readAllFiles()
-    {
-        readFileCategoria();
-        readFilePregunta();
-        readFileRespuesta();
-    }
-    public static void writeAllFiles()
-    {
-        
     }
 }

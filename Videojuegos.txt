@@ -1,10 +1,10 @@
-videojuegos;200;¿Que videojuego mezcla mundos de disney con personajes de final fantasy y propios?;Lol;N;Mario Bros;N;Kingdom Hearts;Y;Tom Raider;N
-videojuegos;100;¿De que compañía es Play Station?;Sony;Y;Phillips;N;JVC;N;Samsung;N
-videojuegos;300;¿De que color es el compañero llamado Waluigi de Mario Bros?;Azul;N;Verde;N;Lila;Y;Amarillo;N
-videojuegos;400;¿Juego de un pajaro que esquiva troncos el cual fue eliminado de los mercados?;Birding;N;Pajaroto;N;Bird;N;Flapy Bird;Y
-videojuegos;500;¿En que año fue presentada por primera vez la Game Boy en europa?;1960;N;1989;N;1990;Y;1996;N
-videojuegos;100;¿Nombre del conocido juego el cual consiste en reañizar misiones con tu mafioso, en la última versión pudiendo elegir entre tres?;GTA;Y;GTG;N;GTP;N;ATG;N
-videojuegos;200;¿De que trata el juego _ _ F A?;Tenis;N;Futbol;Y;Baloncesto;N;Golf;N
-videojuegos;300;¿Juego inspirado en londres el cual el protagonista lleva capucha y chaqueta larga?Tom Rider;N;Halo;N;Assasins Creed;Y;Final Fantasy;N
-videojuegos;400;¿Que forma tiene todo lo del juego llamado Minecraft?Redondo;N;Cuadrado;Y;Triangular;N;Rectangular;N
-videojuegos;500;¿Juego basado en matar monstruos usando el mouse del ordenador;Clicker Heroes;Y;Mousegame;N;Mario Bros;N;Halo;N
+videojuegos;200;ï¿½Que videojuego mezcla mundos de disney con personajes de final fantasy y propios?;Lol;N;Mario Bros;N;Kingdom Hearts;Y;Tom Raider;N
+videojuegos;100;ï¿½De que compaï¿½ï¿½a es Play Station?;Sony;Y;Phillips;N;JVC;N;Samsung;N
+videojuegos;300;ï¿½De que color es el compaï¿½ero llamado Waluigi de Mario Bros?;Azul;N;Verde;N;Lila;Y;Amarillo;N
+videojuegos;400;ï¿½Juego de un pajaro que esquiva troncos el cual fue eliminado de los mercados?;Birding;N;Pajaroto;N;Bird;N;Flapy Bird;Y
+videojuegos;500;ï¿½En que aï¿½o fue presentada por primera vez la Game Boy en europa?;1960;N;1989;N;1990;Y;1996;N
+videojuegos;100;ï¿½Nombre del conocido juego el cual consiste en reaï¿½izar misiones con tu mafioso, en la ï¿½ltima versiï¿½n pudiendo elegir entre tres?;GTA;Y;GTG;N;GTP;N;ATG;N
+videojuegos;200;ï¿½De que trata el juego FIFA?;Tenis;N;Futbol;Y;Baloncesto;N;Golf;N
+videojuegos;300;ï¿½Juego inspirado en londres el cual el protagonista lleva capucha y chaqueta larga?;Tom Rider;N;Halo;N;Assasins Creed;Y;Final Fantasy;N
+videojuegos;400;ï¿½Que forma tiene todo lo del juego llamado Minecraft?;Redondo;N;Cuadrado;Y;Triangular;N;Rectangular;N
+videojuegos;500;ï¿½Juego basado en matar monstruos usando el mouse del ordenador;Clicker Heroes;Y;Mousegame;N;Mario Bros;N;Halo;N
