@@ -14,7 +14,6 @@ public class Jugador {
     public String getNombre() {
         return nombre;
     }
-
     public int getPuntuacion() {
         return puntuacion;
     }
@@ -36,11 +35,13 @@ public class Jugador {
     
     public String turnoJugador()
     {
-        if (this.turno == true)
+        if (this.turno == false)
         {
-            return this.nombre;
+            return this.nombre = "Jugador 1";
+        }else {
+            return this.nombre = "Jugador 2";
         }
-        return this.nombre;
+        
     }
     
     @Override

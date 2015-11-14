@@ -43,6 +43,7 @@ public class OperacionesFicheros {
             
         } catch (IOException|NumberFormatException ex) {
             System.out.println("Error: no se ha podido leer el archivo: " +ex.getMessage());
+            System.exit(0);
         } finally {
                try{
                    if (br!= null)
