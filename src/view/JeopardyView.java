@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import model.Pregunta;
 
@@ -34,7 +33,7 @@ public class JeopardyView extends JFrame{
     public void addComponentsToPane(Container pane)
     {
         panelJeopardy = new JeopardyPanel(modelo.get(WIDTH));
-        arrayBotones = panelJeopardy.getBotonesPuntuaciones();
+        arrayBotones = panelJeopardy.getArrayBotonesJeopardyPanel();
         
         pane.add(panelJeopardy, BorderLayout.PAGE_END);
     }
@@ -42,7 +41,7 @@ public class JeopardyView extends JFrame{
     {
         for (int i = 0; i < arrayBotones.length; i++)
         {
-            arrayBotones[i].addActionListener((ActionListener) controller);
+            arrayBotones[i].addActionListener(controller);
         }
     }
     
