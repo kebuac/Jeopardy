@@ -17,7 +17,6 @@ public class Jeopardy {
     private static final String FILENAME5 = "preguntasHistoria.dat";
     private static final String FILENAME6 = "preguntasMatematicas.dat";
     private static final String FILENAME7 = "preguntasQuimica.dat";
-    private static final String FILENAME8 = "preguntasVideojuegos.dat";
     
     public static void main(String[] args) {
         
@@ -30,7 +29,6 @@ public class Jeopardy {
             modelo = OperacionesFicheros.readFileCategoria(FILENAME5, modelo);
             modelo = OperacionesFicheros.readFileCategoria(FILENAME6, modelo);
             modelo = OperacionesFicheros.readFileCategoria(FILENAME7, modelo);
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME8, modelo);
             JeopardyView view = new JeopardyView(modelo);
             JeopardyController controller = new JeopardyController(modelo, view);
         } catch (IOException ex) {

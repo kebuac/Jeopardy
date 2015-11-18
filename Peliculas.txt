@@ -1,9 +1,9 @@
-peliculas;100;Si muerdes la manzana... De que peli es esta frase?;Cenicienta;N;Blancanieves;Y;Tiana y el sapo;N;Aladdin;N
-peliculas;200;De que trata la pelicula Origen?;Tsunami;N;II Guerra Mundial;N;Suenos;Y;Zombis;N
-peliculas;400;En que empresa intentan entrar los dos protagonistas en Los Becarios?;Twitter;N;Facebook;N;Youtube;N;Google;Y
-peliculas;500;Que pelicula de disney trata las emociones?;UP;N;Atlantis;N;Tarzan;N;Del reves;Y
-peliculas;100;Que dia de la semana es el de los megaestrenos?;Lunes;N;Viernes;N;Miercoles;Y;Sabado;N
-peliculas;200;De que color es el famoso traje de Kill Bill?;Azul;N;Amarillo;Y;Rojo;N;Negro;N
-peliculas;300;Cual es el nombre de la ultima peli de dinosaurios?;Jurassic Park;N;Dinosaurus;N;Jurassic World;Y;500AC;N
-peliculas;400;Cuantas peliculas hay hechas de la saga Torrente?;2;N;5;Y;3;N;4;N
-peliculas;500;Cual es el nombre de la tercera pel�cula de la saga Crep�sculo?;Crepusculo 3;N;Luna Nueva;N;Amanecer;N;Eclipse;Y
+Peliculas;100;Si muerdes la manzana... De que peli es esta frase?;Cenicienta;N;Blancanieves;Y;Tiana y el sapo;N;Aladdin;N
+Peliculas;200;De que trata la pelicula Origen?;Tsunami;N;II Guerra Mundial;N;Suenos;Y;Zombis;N
+Peliculas;400;En que empresa intentan entrar los dos protagonistas en Los Becarios?;Twitter;N;Facebook;N;Youtube;N;Google;Y
+Peliculas;500;Que pelicula de disney trata las emociones?;UP;N;Atlantis;N;Tarzan;N;Del reves;Y
+Peliculas;100;Que dia de la semana es el de los megaestrenos?;Lunes;N;Viernes;N;Miercoles;Y;Sabado;N
+Peliculas;200;De que color es el famoso traje de Kill Bill?;Azul;N;Amarillo;Y;Rojo;N;Negro;N
+Peliculas;300;Cual es el nombre de la ultima peli de dinosaurios?;Jurassic Park;N;Dinosaurus;N;Jurassic World;Y;500AC;N
+Peliculas;400;Cuantas peliculas hay hechas de la saga Torrente?;2;N;5;Y;3;N;4;N
+Peliculas;500;Cual es el nombre de la tercera pel�cula de la saga Crep�sculo?;Crepusculo 3;N;Luna Nueva;N;Amanecer;N;Eclipse;Y

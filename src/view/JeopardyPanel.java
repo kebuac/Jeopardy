@@ -1,10 +1,10 @@
 package view;
 
-import java.awt.GridBagConstraints;
 import javax.swing.JLabel;
 import model.Pregunta;
 import javax.swing.JPanel;
-import java.awt.GridBagLayout;
+import javax.swing.JTextField;
+import java.awt.GridLayout;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -27,10 +27,9 @@ public class JeopardyPanel extends JPanel{
     private JLabel rondaJeopardy;
     private JLabel jugadorJeopardy;
     private static JButton[] arrayBotones;
-    private static JLabel[] arrayLabels;
+    private static JTextField[] arrayLabels;
     
-    private final String[] VALOR_BOTONES = {"100", "200", "300", "400", "500"};
-    private final String[] VALOR_CATEGORIAS = {"Categoria 1", "Categoria 2", "Categoria 3", "Categoria 4", "Categoria 5", "Categoria 6"};
+    private final String VALOR_BOTONES[] = {"100$", "200$", "300$", "400$", "500$"};
     
     public JeopardyPanel(Pregunta pregunta)
     {
@@ -45,7 +44,7 @@ public class JeopardyPanel extends JPanel{
         tituloJeopardy.setText("JEOPARDY!");
         tituloJeopardy.setHorizontalAlignment(SwingConstants.CENTER);
         tituloJeopardy.setFont(new java.awt.Font("Arial", 0, 36));
-        tituloJeopardy.setPreferredSize(new Dimension(627, 43));
+        tituloJeopardy.setPreferredSize(new Dimension(745, 43));
         tituloJeopardy.setBackground(Color.blue);
         tituloJeopardy.setForeground(Color.white);
         tituloJeopardy.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -57,15 +56,16 @@ public class JeopardyPanel extends JPanel{
         panelCentral = new JPanel();
         panelCentral.setLayout(new BorderLayout());
         
-        panelCentral1 = new JPanel();
+        panelCentral1 = new JPanel(new GridLayout(0, 6));
         panelCentral1.setPreferredSize(new Dimension(627, 48));
         
-        arrayLabels = new JLabel[VALOR_CATEGORIAS.length];
+        arrayLabels = new JTextField[6];
         
-        int numeroFilasLabels = 6;
-        for (int i = 0; i < numeroFilasLabels; i++)
+        int count = 0;
+        
+        for (int i = 0; i < arrayLabels.length; i++)
         {
-            arrayLabels[i] = new JLabel(VALOR_CATEGORIAS[i]);
+            arrayLabels[i] = new JTextField(pregunta.getCategoria());
             arrayLabels[i].setPreferredSize(new Dimension(100, 50));
             arrayLabels[i].setMinimumSize(new Dimension(97, 59));
             arrayLabels[i].setMaximumSize(new Dimension(100, 50));
@@ -79,69 +79,27 @@ public class JeopardyPanel extends JPanel{
         }
         panelCentral.add(panelCentral1, BorderLayout.PAGE_START);
         
-        panelCentral2 = new JPanel();        
-        GridBagLayout layoutPanelCentral = new GridBagLayout();
-        GridBagConstraints c = new GridBagConstraints();
-        panelCentral2.setLayout(layoutPanelCentral);
+        panelCentral2 = new JPanel(new GridLayout(0, 6));
         panelCentral2.setPreferredSize(new Dimension(627, 627));
         
-        arrayBotones = new JButton[VALOR_BOTONES.length];
+        arrayBotones = new JButton[30];
+
+        for (int i = 0; i < arrayBotones.length; i++) {
+
+            if ((i % 6 == 0) && (i > 0)) {
+                count++;
+            }
         
-        int numeroFilasBotones = 5;
-        
-        for (int i=0; i<numeroFilasBotones; i++)
-        {
-            arrayBotones[i] = new JButton(VALOR_BOTONES[i]);
+            arrayBotones[i] = new JButton(VALOR_BOTONES[count]);
             arrayBotones[i].setBackground(Color.blue);
             arrayBotones[i].setForeground(Color.white);
+            arrayBotones[i].setBorder(BorderFactory.createLineBorder(Color.black));
+            arrayBotones[i].setFont(new java.awt.Font("Arial", 0, 12));
             
-            c.gridx=0;
-            c.gridy=i;
-            c.ipady=50;
-            c.ipadx=50;
-            c.fill=123;
-            panelCentral2.add(arrayBotones[i], c);
             
-            arrayBotones[i] = new JButton(VALOR_BOTONES[i]);
-            arrayBotones[i].setBackground(Color.blue);
-            arrayBotones[i].setForeground(Color.white);          
+            //crear boton y guardarlo en la posicion i del array
             
-            c.gridx=1;
-            c.gridy=i;
-            panelCentral2.add(arrayBotones[i], c);
-            
-            arrayBotones[i] = new JButton(VALOR_BOTONES[i]);
-            arrayBotones[i].setBackground(Color.blue);
-            arrayBotones[i].setForeground(Color.white);
-            
-            c.gridx=2;
-            c.gridy=i;
-            panelCentral2.add(arrayBotones[i], c);
-            
-            arrayBotones[i] = new JButton(VALOR_BOTONES[i]);
-            arrayBotones[i].setBackground(Color.blue);
-            arrayBotones[i].setForeground(Color.white);
-            
-            c.gridx=3;
-            c.gridy=i;
-            panelCentral2.add(arrayBotones[i], c);
-            
-            arrayBotones[i] = new JButton(VALOR_BOTONES[i]);
-            arrayBotones[i].setBackground(Color.blue);
-            arrayBotones[i].setForeground(Color.white);
-            
-            c.gridx=4;
-            c.gridy=i;
-            panelCentral2.add(arrayBotones[i], c);
-            
-            arrayBotones[i] = new JButton(VALOR_BOTONES[i]);
-            arrayBotones[i].setBackground(Color.blue);
-            arrayBotones[i].setForeground(Color.white);
-            
-            c.gridx=5;
-            c.gridy=i;
-            panelCentral2.add(arrayBotones[i], c);
-            
+            panelCentral2.add(arrayBotones[i]);
         }
         panelCentral.add(panelCentral2, BorderLayout.CENTER);
         
