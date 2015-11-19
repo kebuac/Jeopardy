@@ -3,7 +3,6 @@ package view;
 import javax.swing.JLabel;
 import model.Pregunta;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
@@ -12,10 +11,11 @@ import model.Jugador;
 import java.awt.Dimension;
 import javax.swing.SwingConstants;
 import javax.swing.BorderFactory;
+import java.util.ArrayList;
 
 
 public class JeopardyPanel extends JPanel{
-    private Pregunta pregunta;
+    private ArrayList<Pregunta> pregunta;
     private Jugador jugador;
     
     private JLabel tituloJeopardy;
@@ -27,11 +27,11 @@ public class JeopardyPanel extends JPanel{
     private JLabel rondaJeopardy;
     private JLabel jugadorJeopardy;
     private static JButton[] arrayBotones;
-    private static JTextField[] arrayLabels;
+    private static JLabel[] arrayLabels;
     
     private final String VALOR_BOTONES[] = {"100$", "200$", "300$", "400$", "500$"};
     
-    public JeopardyPanel(Pregunta pregunta)
+    public JeopardyPanel(ArrayList<Pregunta> pregunta)
     {
         this.pregunta = pregunta;
         
@@ -59,13 +59,12 @@ public class JeopardyPanel extends JPanel{
         panelCentral1 = new JPanel(new GridLayout(0, 6));
         panelCentral1.setPreferredSize(new Dimension(627, 48));
         
-        arrayLabels = new JTextField[6];
+        arrayLabels = new JLabel[30];
         
         int count = 0;
-        
         for (int i = 0; i < arrayLabels.length; i++)
         {
-            arrayLabels[i] = new JTextField(pregunta.getCategoria());
+            arrayLabels[i] = new JLabel(pregunta.get(i).getCategoria());
             arrayLabels[i].setPreferredSize(new Dimension(100, 50));
             arrayLabels[i].setMinimumSize(new Dimension(97, 59));
             arrayLabels[i].setMaximumSize(new Dimension(100, 50));
@@ -75,7 +74,11 @@ public class JeopardyPanel extends JPanel{
             arrayLabels[i].setBackground(Color.blue);
             arrayLabels[i].setOpaque(true);
             arrayLabels[i].setForeground(Color.white);
-            panelCentral1.add(arrayLabels[i]);
+            
+            if(i%5 == 0){
+                panelCentral1.add(arrayLabels[i]);
+            }
+           
         }
         panelCentral.add(panelCentral1, BorderLayout.PAGE_START);
         
@@ -140,12 +143,17 @@ public class JeopardyPanel extends JPanel{
     {
         return this.arrayBotones;
     }
-    public Pregunta getPreguntaJeopardyPanel()
+    public ArrayList<Pregunta> getPreguntaJeopardyPanel()
     {
         return this.pregunta;
     }
     public Jugador getJugadorJeopardyPanel()
     {
         return this.jugador;
+    }
+    private boolean isCategoriaIn()
+    {
+        
+        return true;
     }
 }

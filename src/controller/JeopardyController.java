@@ -23,7 +23,7 @@ public class JeopardyController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         
-        String[] posicionesCategoria1 = {"0","1","2","3","4","5"};
+        int[] posicionesCategoria1 = {0,6,12,18,24};
         
         JButton[] botones = vista.getBotonesView();
         //Recorrer array para asignar cosas a cada posicion
@@ -31,10 +31,10 @@ public class JeopardyController implements ActionListener{
         int puntuacionSeleccionada=0;
         for (int i=0; i<botones.length;i++){
             if (botones[i]==ae.getSource()){
-                /*puntuacionSeleccionada = Integer.parseInt(botones[i].getText());
+                puntuacionSeleccionada = Integer.parseInt(botones[i].getText().substring(0, botones[i].getText().length()-1));
                 if (containsElementInArray(i,posicionesCategoria1)){
-                    categoriaSeleccionada=1;
-                }else if ()*/
+                    categoriaSeleccionada=0;
+                }
                 botones[i].setEnabled(false);
                 //Si posicion es igual a X puntuacion crear nueva Frame donde aparecera la pregunta
                 
@@ -48,6 +48,20 @@ public class JeopardyController implements ActionListener{
         
         //Si respuesta es correcta actualizar puntuacion jugador y pasar turno
         //Si respuesta es incorrecta actualizar puntuacion jugador y pasa turno
+    }
+    
+    private boolean containsElementInArray(int value, int[] array)
+    {
+        boolean aux = false;
+        
+        for(int i = 0; i < array.length; i++)
+        {
+            if (array[i] == value){
+                aux = true;
+                break;
+            }
+        }
+        return aux;
     }
 
 }

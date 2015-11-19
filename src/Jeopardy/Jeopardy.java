@@ -5,8 +5,8 @@ import controller.JeopardyController;
 import java.io.IOException;
 import java.util.ArrayList;
 import model.Pregunta;
+import model.Respuesta;
 import view.JeopardyView;
-
 
 public class Jeopardy {
     
@@ -16,7 +16,7 @@ public class Jeopardy {
     private static final String FILENAME4 = "preguntasGeografia.dat";
     private static final String FILENAME5 = "preguntasHistoria.dat";
     private static final String FILENAME6 = "preguntasMatematicas.dat";
-    private static final String FILENAME7 = "preguntasQuimica.dat";
+    
     
     public static void main(String[] args) {
         
@@ -28,7 +28,14 @@ public class Jeopardy {
             modelo = OperacionesFicheros.readFileCategoria(FILENAME4, modelo);
             modelo = OperacionesFicheros.readFileCategoria(FILENAME5, modelo);
             modelo = OperacionesFicheros.readFileCategoria(FILENAME6, modelo);
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME7, modelo);
+            /*
+            for (int i = 0; i < modelo.size(); i++)
+            {
+                System.out.println(modelo.get(i).getCategoria());
+                System.out.println(modelo.get(i).getTextoPregunta());
+                System.out.println(modelo.get(i).getValorPregunta());                  
+            }
+                    */
             JeopardyView view = new JeopardyView(modelo);
             JeopardyController controller = new JeopardyController(modelo, view);
         } catch (IOException ex) {

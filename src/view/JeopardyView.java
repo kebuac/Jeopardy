@@ -32,7 +32,7 @@ public class JeopardyView extends JFrame{
     }
     public void addComponentsToPane(Container pane)
     {
-        panelJeopardy = new JeopardyPanel(modelo.get(WIDTH));
+        panelJeopardy = new JeopardyPanel(modelo);
         arrayBotones = panelJeopardy.getArrayBotonesJeopardyPanel();
         
         pane.add(panelJeopardy, BorderLayout.PAGE_END);
