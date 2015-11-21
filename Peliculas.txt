@@ -1,5 +1,0 @@
-Cine;100;Si muerdes la manzana... De que peli es esta frase?;Cenicienta;N;Blancanieves;Y;Tiana y el sapo;N;Aladdin;N
-Cine;200;De que trata la pelicula Origen?;Tsunami;N;II Guerra Mundial;N;Suenos;Y;Zombis;N
-Cine;300;En que empresa intentan entrar los dos protagonistas en Los Becarios?;Twitter;N;Facebook;N;Youtube;N;Google;Y
-Cine;400;Que pelicula de disney trata las emociones?;UP;N;Atlantis;N;Tarzan;N;Del reves;Y
-Cine;500;Que dia de la semana es el de los megaestrenos?;Lunes;N;Viernes;N;Miercoles;Y;Sabado;N

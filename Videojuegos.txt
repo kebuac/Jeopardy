@@ -1,5 +1,0 @@
-Videojuegos;100;Que videojuego mezcla mundos de disney con personajes de final fantasy y propios?;Lol;N;Mario Bros;N;Kingdom Hearts;Y;Tom Raider;N
-Videojuegos;200;De que compania es Play Station?;Sony;Y;Phillips;N;JVC;N;Samsung;N
-Videojuegos;300;De que color es el compa�ero llamado Waluigi de Mario Bros?;Azul;N;Verde;N;Lila;Y;Amarillo;N
-Videojuegos;400;Juego de un pajaro que esquiva troncos el cual fue eliminado de los mercados?;Birding;N;Pajaroto;N;Bird;N;Flapy Bird;Y
-Videojuegos;500;Nombre del conocido juego el cual consiste en rea�izar misiones con tu mafioso, en la ultima version pudiendo elegir entre tres?;GTA;Y;GTG;N;GTP;N;ATG;N

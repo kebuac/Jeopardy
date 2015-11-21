@@ -5,13 +5,12 @@ import controller.JeopardyController;
 import java.io.IOException;
 import java.util.ArrayList;
 import model.Pregunta;
-import model.Respuesta;
 import view.JeopardyView;
 
 public class Jeopardy {
     
-    private static final String FILENAME1 = "Peliculas.txt";
-    private static final String FILENAME2 = "Videojuegos.txt";
+    private static final String FILENAME1 = "Peliculas.dat";
+    private static final String FILENAME2 = "Videojuegos.dat";
     private static final String FILENAME3 = "preguntasBolivia.dat";
     private static final String FILENAME4 = "preguntasGeografia.dat";
     private static final String FILENAME5 = "preguntasHistoria.dat";
@@ -33,10 +32,17 @@ public class Jeopardy {
             {
                 System.out.println(modelo.get(i).getCategoria());
                 System.out.println(modelo.get(i).getTextoPregunta());
-                System.out.println(modelo.get(i).getValorPregunta());                  
-            }
-                    */
+                System.out.println(modelo.get(i).getValorPregunta());
+                for (int j = 0; j < modelo.get(i).getRespuestas().size(); j++)
+                {
+                    System.out.println(modelo.get(i).getRespuestas().get(j).getTexto());
+                    System.out.println(modelo.get(i).getRespuestas().get(j).getValor());
+                }
+            }*/
+                    
             JeopardyView view = new JeopardyView(modelo);
+           
+           
             JeopardyController controller = new JeopardyController(modelo, view);
         } catch (IOException ex) {
             System.out.println("Fin del programa por no poder acceder a datos fuente");

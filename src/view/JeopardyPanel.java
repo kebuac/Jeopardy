@@ -12,7 +12,7 @@ import java.awt.Dimension;
 import javax.swing.SwingConstants;
 import javax.swing.BorderFactory;
 import java.util.ArrayList;
-
+import java.awt.Font;
 
 public class JeopardyPanel extends JPanel{
     private ArrayList<Pregunta> pregunta;
@@ -43,7 +43,7 @@ public class JeopardyPanel extends JPanel{
         tituloJeopardy = new JLabel();
         tituloJeopardy.setText("JEOPARDY!");
         tituloJeopardy.setHorizontalAlignment(SwingConstants.CENTER);
-        tituloJeopardy.setFont(new java.awt.Font("Arial", 0, 36));
+        tituloJeopardy.setFont(new Font("Arial", 0, 36));
         tituloJeopardy.setPreferredSize(new Dimension(745, 43));
         tituloJeopardy.setBackground(Color.blue);
         tituloJeopardy.setForeground(Color.white);
@@ -70,7 +70,7 @@ public class JeopardyPanel extends JPanel{
             arrayLabels[i].setMaximumSize(new Dimension(100, 50));
             arrayLabels[i].setHorizontalAlignment(SwingConstants.CENTER);
             arrayLabels[i].setBorder(BorderFactory.createLineBorder(Color.black));
-            arrayLabels[i].setFont(new java.awt.Font("Arial", 0, 12));
+            arrayLabels[i].setFont(new Font("Arial", 0, 12));
             arrayLabels[i].setBackground(Color.blue);
             arrayLabels[i].setOpaque(true);
             arrayLabels[i].setForeground(Color.white);
@@ -97,7 +97,7 @@ public class JeopardyPanel extends JPanel{
             arrayBotones[i].setBackground(Color.blue);
             arrayBotones[i].setForeground(Color.white);
             arrayBotones[i].setBorder(BorderFactory.createLineBorder(Color.black));
-            arrayBotones[i].setFont(new java.awt.Font("Arial", 0, 12));
+            arrayBotones[i].setFont(new Font("Arial", 0, 12));
             
             
             //crear boton y guardarlo en la posicion i del array
@@ -116,7 +116,7 @@ public class JeopardyPanel extends JPanel{
         rondaJeopardy = new JLabel();
         rondaJeopardy.setText("Ronda: " +ronda);
         rondaJeopardy.setHorizontalAlignment(SwingConstants.CENTER);
-        rondaJeopardy.setFont(new java.awt.Font("Arial", 0, 12));
+        rondaJeopardy.setFont(new Font("Arial", 0, 12));
         rondaJeopardy.setPreferredSize(new Dimension(200, 43));
         rondaJeopardy.setBackground(Color.blue);
         rondaJeopardy.setForeground(Color.white);
@@ -127,7 +127,7 @@ public class JeopardyPanel extends JPanel{
         jugadorJeopardy = new JLabel();
         jugadorJeopardy.setText(jugadorX);
         jugadorJeopardy.setHorizontalAlignment(SwingConstants.CENTER);
-        jugadorJeopardy.setFont(new java.awt.Font("Arial", 0, 12));
+        jugadorJeopardy.setFont(new Font("Arial", 0, 12));
         jugadorJeopardy.setPreferredSize(new Dimension(200, 43));
         jugadorJeopardy.setBackground(Color.blue);
         jugadorJeopardy.setForeground(Color.white);
@@ -153,7 +153,6 @@ public class JeopardyPanel extends JPanel{
     }
     private boolean isCategoriaIn()
     {
-        
         return true;
     }
 }
