@@ -28,13 +28,13 @@ public class OperacionesFicheros {
                 String[] str = linea.split(";");
                 ArrayList<Respuesta> auxRespuestas = new ArrayList<>();
                 Respuesta respuesta;
-                respuesta = new Respuesta(str[3], str[4].charAt(0));
+                respuesta = new Respuesta(str[3], str[4]);
                 auxRespuestas.add(respuesta);
-                respuesta = new Respuesta(str[5], str[6].charAt(0));
+                respuesta = new Respuesta(str[5], str[6]);
                 auxRespuestas.add(respuesta);
-                respuesta = new Respuesta(str[7], str[8].charAt(0));
+                respuesta = new Respuesta(str[7], str[8]);
                 auxRespuestas.add(respuesta);
-                respuesta = new Respuesta(str[9], str[10].charAt(0));
+                respuesta = new Respuesta(str[9], str[10]);
                 auxRespuestas.add(respuesta);
                 Pregunta pregunta = new Pregunta(str[0], str[2], Integer.parseInt(str[1]), auxRespuestas);
                 auxPreguntas.add(pregunta);

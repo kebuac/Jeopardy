@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import model.Pregunta;
 import java.util.ArrayList;
+import javax.swing.SwingConstants;
 
 public class Emergente extends JFrame{
     
@@ -46,7 +47,8 @@ public class Emergente extends JFrame{
         respuesta3 = modelo.getRespuestas().get(2).getTexto();
         respuesta4 = modelo.getRespuestas().get(3).getTexto();
         
-        preguntaLabel = new JLabel(pregunta);        
+        preguntaLabel = new JLabel(pregunta);
+        preguntaLabel.setHorizontalAlignment(SwingConstants.CENTER);
         preguntaLabel.setForeground(Color.BLACK);
         preguntaLabel.setFont(new Font("Arial", 0, 15));
         this.add(preguntaLabel, BorderLayout.PAGE_START);
@@ -55,7 +57,7 @@ public class Emergente extends JFrame{
         
         
         entreePanel = new JPanel(new GridLayout(4, 0));
-        entreePanel.add(radioButton = new JRadioButton(respuesta1));
+        entreePanel.add(radioButton = new JRadioButton(respuesta1, true));
         radioButton.setActionCommand(respuesta1);
         entreeGroup.add(radioButton);
 
@@ -67,7 +69,7 @@ public class Emergente extends JFrame{
         radioButton.setActionCommand(respuesta3);
         entreeGroup.add(radioButton);
         
-        entreePanel.add(radioButton = new JRadioButton(respuesta4, true));
+        entreePanel.add(radioButton = new JRadioButton(respuesta4));
         radioButton.setActionCommand(respuesta4);
         entreeGroup.add(radioButton);
         
@@ -84,6 +86,9 @@ public class Emergente extends JFrame{
     
     public JButton getOrderButton()
     {
-        return orderButton;
+        JButton entree;
+        entree = new JButton(entreeGroup.getSelection().getActionCommand());
+        
+        return entree;
     }
 }

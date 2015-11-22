@@ -22,6 +22,7 @@ public class JeopardyView extends JFrame{
         
         this.setTitle("Jeopardy!");
         this.setLayout(new BorderLayout());
+        this.setLocation(520, 200);
         this.setPreferredSize(new Dimension(745, 638));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);

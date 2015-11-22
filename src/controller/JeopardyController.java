@@ -74,6 +74,7 @@ public class JeopardyController implements ActionListener{
         Emergente viewPregunta = new Emergente(modeloPregunta);
         EmergenteController controllerPregunta = new EmergenteController(modeloPregunta, viewPregunta, this);
          
+        viewPregunta.setLocation(700,350);
         viewPregunta.pack();
         viewPregunta.setVisible(true);
             

@@ -1,8 +1,8 @@
 package model;
 
 public class Jugador {
-    private String nombre;
-    private int puntuacion;
+    private String nombre = "";
+    private int puntuacion = 0;
     private boolean turno = false;
     
     public Jugador(String nombre, int puntuacion, boolean turno) {
