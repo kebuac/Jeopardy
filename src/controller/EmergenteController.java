@@ -57,7 +57,7 @@ public class EmergenteController implements ActionListener {
                         ventanaCorrecta.pack();
                         ventanaCorrecta.setVisible(true);
                         
-                        
+                        jeopardyController.setPuntacion(modelo.getValorPregunta());
                     }else{
                         try {
                           throw new RespuestaIncorrectaException("Respuesta incorrecta");
@@ -70,7 +70,5 @@ public class EmergenteController implements ActionListener {
             
             this.vista.dispatchEvent(new WindowEvent(vista, WindowEvent.WINDOW_CLOSING));
          }
-            
     }
-    
 }

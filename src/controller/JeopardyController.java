@@ -6,13 +6,14 @@ import view.JeopardyView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import model.Jugador;
 import view.Emergente;
 
 public class JeopardyController implements ActionListener{
     private ArrayList<Pregunta> modelo;
     private JeopardyView vista;
-   
     private Pregunta modeloPregunta;
+    private Jugador jugador;
     
     public JeopardyController(ArrayList<Pregunta> modelo, JeopardyView vista)
     {
@@ -35,10 +36,10 @@ public class JeopardyController implements ActionListener{
         
         JButton[] botones = vista.getBotonesView();
         //Recorrer array para asignar cosas a cada posicion
-        int categoriaSeleccionada=0;
-        int puntuacionSeleccionada=0;
-        for (int i=0; i<botones.length;i++){
-            if (botones[i]==ae.getSource()){
+        int categoriaSeleccionada = 0;
+        int puntuacionSeleccionada = 0;
+        for (int i=0; i < botones.length;i++){
+            if (botones[i] == ae.getSource()){
                 puntuacionSeleccionada = Integer.parseInt(botones[i].getText().substring(0, botones[i].getText().length()-1));
                 if (containsElementInArray(i,posicionesCategoria1)){
                     categoriaSeleccionada=0;
@@ -95,6 +96,11 @@ public class JeopardyController implements ActionListener{
     }
 
     public void setPuntacion (int puntuacion){
-        System.out.println("JeopardyController leyendo nueva puntuacion "+puntuacion);
+        int puntuacionNueva = 0;
+        int puntuacionActual = 0;
+        
+        puntuacionNueva =  puntuacionActual + puntuacion;
+        
+        System.out.println("JeopardyController leyendo nueva puntuacion " +puntuacionNueva);
     }
 }

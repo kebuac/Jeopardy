@@ -18,30 +18,8 @@ public class Jugador {
         return puntuacion;
     }
 
-    public boolean isTurno() {
+    public boolean getTurno() {
         return turno;
-    }
-    
-    public void addPuntuacion()
-    {
-        this.puntuacion = puntuacion + puntuacion;
-    }
-    
-    public void minusPuntuacion()
-    {
-        this.puntuacion = puntuacion - puntuacion;
-        if (this.puntuacion<0) this.puntuacion=0;
-    }
-    
-    public String turnoJugador()
-    {
-        if (this.turno == false)
-        {
-            return this.nombre = "Jugador 1";
-        }else {
-            return this.nombre = "Jugador 2";
-        }
-        
     }
     
     @Override

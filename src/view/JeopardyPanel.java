@@ -26,8 +26,8 @@ public class JeopardyPanel extends JPanel{
     private JPanel panelInferior;
     private JLabel rondaJeopardy;
     private JLabel jugadorJeopardy;
-    private static JButton[] arrayBotones;
-    private static JLabel[] arrayLabels;
+    private JButton[] arrayBotones;
+    private JLabel[] arrayLabels;
     
     private final String VALOR_BOTONES[] = {"100$", "200$", "300$", "400$", "500$"};
     
@@ -150,9 +150,5 @@ public class JeopardyPanel extends JPanel{
     public Jugador getJugadorJeopardyPanel()
     {
         return this.jugador;
-    }
-    private boolean isCategoriaIn()
-    {
-        return true;
     }
 }

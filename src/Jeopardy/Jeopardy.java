@@ -20,30 +20,28 @@ public class Jeopardy {
     public static void main(String[] args) {
         
         try{
-            ArrayList<Pregunta>  modelo = null;
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME1, modelo);
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME2, modelo);
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME3, modelo);
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME4, modelo);
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME5, modelo);
-            modelo = OperacionesFicheros.readFileCategoria(FILENAME6, modelo);
-            /*
-            for (int i = 0; i < modelo.size(); i++)
-            {
-                System.out.println(modelo.get(i).getCategoria());
-                System.out.println(modelo.get(i).getTextoPregunta());
-                System.out.println(modelo.get(i).getValorPregunta());
-                for (int j = 0; j < modelo.get(i).getRespuestas().size(); j++)
-                {
-                    System.out.println(modelo.get(i).getRespuestas().get(j).getTexto());
-                    System.out.println(modelo.get(i).getRespuestas().get(j).getValor());
-                }
-            }*/
+            //int ronda = 0;
+            
+            //f (ronda <= 20)
+            //{
+                ArrayList<Pregunta>  modelo = null;
+                modelo = OperacionesFicheros.readFileCategoria(FILENAME1, modelo);
+                modelo = OperacionesFicheros.readFileCategoria(FILENAME2, modelo);
+                modelo = OperacionesFicheros.readFileCategoria(FILENAME3, modelo);
+                modelo = OperacionesFicheros.readFileCategoria(FILENAME4, modelo);
+                modelo = OperacionesFicheros.readFileCategoria(FILENAME5, modelo);
+                modelo = OperacionesFicheros.readFileCategoria(FILENAME6, modelo);
                     
-            JeopardyView view = new JeopardyView(modelo);
-           
-           
-            JeopardyController controller = new JeopardyController(modelo, view);
+                JeopardyView view = new JeopardyView(modelo);
+                JeopardyController controller = new JeopardyController(modelo, view);
+            
+                //ronda++;
+                //System.out.println(ronda);
+            //}else
+            //{
+                //Finalizar juego, mostrar ganador y puntuacion ganadora
+                //System.out.println("Finalizacion del juego ");
+            //}
         } catch (IOException ex) {
             System.out.println("Fin del programa por no poder acceder a datos fuente");
         } catch (NumberFormatException ex) {
