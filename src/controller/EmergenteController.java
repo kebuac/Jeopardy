@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.SwingConstants;
 import model.RespuestaIncorrectaException;
@@ -68,6 +69,9 @@ public class EmergenteController implements ActionListener {
 
                             fi = new JLabel(jeopardyController.getGanador());
                             fi.setFont(new Font("BOLD", 0, 20));
+                            fi.setBackground(Color.BLUE);
+                            fi.setForeground(Color.WHITE);
+                            fi.setOpaque(true);
                             fi.setHorizontalAlignment(SwingConstants.CENTER);
                             ventanaFinal.add(fi, BorderLayout.CENTER);
                             ventanaFinal.pack();
@@ -97,6 +101,9 @@ public class EmergenteController implements ActionListener {
 
                             fi = new JLabel(jeopardyController.getGanador());
                             fi.setFont(new Font("BOLD", 0, 20));
+                            fi.setBackground(Color.BLUE);
+                            fi.setOpaque(true);
+                            fi.setForeground(Color.WHITE);
                             fi.setHorizontalAlignment(SwingConstants.CENTER);
                             ventanaFinal.add(fi, BorderLayout.CENTER);
                             ventanaFinal.pack();

@@ -24,7 +24,6 @@ public class JeopardyPanel extends JPanel {
     private Jugador jugador;
     final static int MAXGAP = 20;
 
-    private JLabel tituloJeopardy;
     private JPanel panelSuperior;
     private JPanel panelCentral1;
     private JPanel panelCentral2;
@@ -52,8 +51,8 @@ public class JeopardyPanel extends JPanel {
         String jugadores[] = new String[3];
         this.jugadores = jugadores;
 
-        jugadores[0] = jugador1 + " Puntuación= " + puntuacion1;
-        jugadores[1] = jugador2 + " Puntuación= " + puntuacion2;
+        jugadores[0] = jugador1 + " Puntuación =" +puntuacion1;
+        jugadores[1] = jugador2 + " Puntuación =" +puntuacion2;
         jugadores[2] = "Ronda: " + ronda;
 
         Border border = BorderFactory.createLineBorder(Color.WHITE, 5);
