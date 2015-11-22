@@ -1,14 +1,12 @@
 package model;
 
 public class Jugador {
-    private String nombre = "";
-    private int puntuacion = 0;
-    private boolean turno = false;
+    private String nombre;
+    private int puntuacion;
     
-    public Jugador(String nombre, int puntuacion, boolean turno) {
+    public Jugador(String nombre, int puntuacion) {
         this.nombre = nombre;
         this.puntuacion = puntuacion;
-        this.turno = turno;
     }
 
     public String getNombre() {
@@ -18,13 +16,13 @@ public class Jugador {
         return puntuacion;
     }
 
-    public boolean getTurno() {
-        return turno;
+    public void setPuntuacion(int puntuacion) {
+        this.puntuacion = puntuacion;
     }
     
     @Override
     public String toString()
     {
-        return "El nombre del jugador es: "+nombre+" y su puntuacion es: "+puntuacion;
+        return "El nombre del jugador ganador es: " +nombre+ " y su puntuacion es: " +puntuacion;
     }
 }

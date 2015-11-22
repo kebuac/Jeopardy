@@ -8,12 +8,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import model.Jugador;
 import view.Emergente;
-
 public class JeopardyController implements ActionListener{
     private ArrayList<Pregunta> modelo;
     private JeopardyView vista;
     private Pregunta modeloPregunta;
+    private int ronda = 1;
     private Jugador jugador;
+    private Jugador jugador2;
+    private int j1[] = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29};
+    private int puntuacionNueva = 0;
     
     public JeopardyController(ArrayList<Pregunta> modelo, JeopardyView vista)
     {
@@ -73,8 +76,8 @@ public class JeopardyController implements ActionListener{
         int posicion = categoriaSeleccionada + (int)(puntuacionSeleccionada/100) -1;
         modeloPregunta = this.modelo.get(posicion);
         Emergente viewPregunta = new Emergente(modeloPregunta);
-        EmergenteController controllerPregunta = new EmergenteController(modeloPregunta, viewPregunta, this);
-         
+        EmergenteController controllerPregunta = new EmergenteController(modeloPregunta, viewPregunta, this); 
+        
         viewPregunta.setLocation(700,350);
         viewPregunta.pack();
         viewPregunta.setVisible(true);
@@ -94,13 +97,73 @@ public class JeopardyController implements ActionListener{
         }
         return aux;
     }
+    public void crearJugador()
+    {
+        jugador = new Jugador("Jugador 1", 0);
+        jugador2 = new Jugador("Jugador 2", 0);
+    }
+    public void setMasPuntacion(int puntuacion) {
 
-    public void setPuntacion (int puntuacion){
-        int puntuacionNueva = 0;
-        int puntuacionActual = 0;
-        
-        puntuacionNueva =  puntuacionActual + puntuacion;
-        
-        System.out.println("JeopardyController leyendo nueva puntuacion " +puntuacionNueva);
+        if (containsElementInArray(ronda, j1)) {
+            puntuacionNueva = jugador.getPuntuacion() + puntuacion;
+
+            jugador.setPuntuacion(puntuacionNueva);
+            System.out.println("La puntuacion del  " + jugador.getNombre() + " es igual a " + jugador.getPuntuacion() + " ronda: " + ronda);
+        } else {
+            puntuacionNueva = jugador2.getPuntuacion() + puntuacion;
+
+            jugador2.setPuntuacion(puntuacionNueva);
+            System.out.println("La puntuacion del  " + jugador2.getNombre() + " es igual a " + jugador2.getPuntuacion() + " ronda: " + ronda);
+        }
+
+        ronda++;
+    }
+    
+     public void setMenosPuntacion(int puntuacion) {
+
+        if (containsElementInArray(ronda, j1)) {
+
+            if ((jugador.getPuntuacion() - puntuacion) <= 0) {
+                jugador.setPuntuacion(0);
+
+            }else {
+                puntuacionNueva = jugador.getPuntuacion() - puntuacion;
+
+                jugador.setPuntuacion(puntuacionNueva);
+            }
+
+            System.out.println("La puntuacion del  " + jugador.getNombre() + " es igual a " + jugador.getPuntuacion() + " ronda: " + ronda);
+        } else {
+
+            if ((jugador2.getPuntuacion() - puntuacion) <= 0) {
+                jugador2.setPuntuacion(0);
+
+            } else {
+                puntuacionNueva = jugador2.getPuntuacion() - puntuacion;
+
+                jugador2.setPuntuacion(puntuacionNueva);
+            }
+
+            System.out.println("La puntuacion del  " + jugador2.getNombre() + " es igual a " + jugador2.getPuntuacion() + " ronda: " + ronda);
+
+        }
+        ronda++;
+    }
+    public int getRonda()
+    {
+        return ronda;
+    }
+    public String getGanador()
+    {
+        if (jugador.getPuntuacion() == jugador2.getPuntuacion())
+        {
+            return "Los jugadores han empatado";
+        }else if (jugador.getPuntuacion() < jugador2.getPuntuacion())
+        {
+            return "El ganador es el Jugador 2";
+        }else 
+        {
+            return "El ganador es el Jugador 1";
+        }
     }
 }

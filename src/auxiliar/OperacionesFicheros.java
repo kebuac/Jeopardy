@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import model.Pregunta;
 import model.Respuesta;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.Path;
 
 public class OperacionesFicheros {
     
@@ -56,5 +58,26 @@ public class OperacionesFicheros {
                }
             }
         return auxPreguntas;
+    }
+    public static void writeFile(Path path)
+    {
+        BufferedWriter escribir = null;
+        
+        try {
+            escribir = Files.newBufferedWriter(path, java.nio.charset.StandardCharsets.UTF_8, java.nio.file.StandardOpenOption.WRITE);
+            escribir.write("HOLAAAAAAAAAA");
+            escribir.newLine();
+            
+        } catch (IOException ex) {
+            System.out.println("Error al escribir el archivo: " + ex.getMessage());
+        } finally {
+            try {
+                if (escribir != null) {
+                    escribir.close();
+                }
+            } catch (IOException ex) {
+                System.out.println("Error al cerrar el BufferedWriter: " + ex.getMessage());
+            }
+        }
     }
 }
