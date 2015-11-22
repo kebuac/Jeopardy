@@ -65,6 +65,7 @@ public class OperacionesFicheros {
         
         try {
             escribir = Files.newBufferedWriter(path, java.nio.charset.StandardCharsets.UTF_8, java.nio.file.StandardOpenOption.WRITE);
+           
             escribir.write("HOLAAAAAAAAAA");
             escribir.newLine();
             

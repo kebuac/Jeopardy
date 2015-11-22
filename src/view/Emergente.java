@@ -33,7 +33,7 @@ public class Emergente extends JFrame{
         this.modelo = modelo;
         this.setLocation(200, 200);
         this.setLayout(new BorderLayout());
-        this.setPreferredSize(new Dimension(350, 350));
+        this.setPreferredSize(new Dimension(1000, 400));
         
         String pregunta;
         String respuesta1;
@@ -49,8 +49,10 @@ public class Emergente extends JFrame{
         
         preguntaLabel = new JLabel(pregunta);
         preguntaLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        preguntaLabel.setForeground(Color.BLACK);
-        preguntaLabel.setFont(new Font("Arial", 0, 15));
+        preguntaLabel.setForeground(Color.WHITE);
+        preguntaLabel.setFont(new Font("BOLD", 0, 17));
+        preguntaLabel.setBackground(Color.BLUE);
+        preguntaLabel.setOpaque(true);
         this.add(preguntaLabel, BorderLayout.PAGE_START);
         
         entreeGroup = new ButtonGroup();
@@ -60,23 +62,32 @@ public class Emergente extends JFrame{
         entreePanel.add(radioButton = new JRadioButton(respuesta1, true));
         radioButton.setActionCommand(respuesta1);
         entreeGroup.add(radioButton);
+        radioButton.setForeground(Color.BLACK);
+        radioButton.setFont(new Font("BOLD", 0, 17));
 
         entreePanel.add(radioButton = new JRadioButton(respuesta2));
         radioButton.setActionCommand(respuesta2);
         entreeGroup.add(radioButton);
+        radioButton.setForeground(Color.BLACK);
+        radioButton.setFont(new Font("BOLD", 0, 17));
 
         entreePanel.add(radioButton = new JRadioButton(respuesta3));
         radioButton.setActionCommand(respuesta3);
         entreeGroup.add(radioButton);
+        radioButton.setForeground(Color.BLACK);
+        radioButton.setFont(new Font("BOLD", 0, 17));
         
         entreePanel.add(radioButton = new JRadioButton(respuesta4));
         radioButton.setActionCommand(respuesta4);
         entreeGroup.add(radioButton);
+        radioButton.setForeground(Color.BLACK);
+        radioButton.setFont(new Font("BOLD", 0, 17));
         
         orderButton = new JButton("Enviar respuesta");
+        orderButton.setBackground(Color.BLUE);
+        orderButton.setForeground(Color.WHITE);
         this.add(entreePanel, BorderLayout.CENTER);
-        this.add(orderButton, BorderLayout.PAGE_END);
-        
+        this.add(orderButton, BorderLayout.PAGE_END);        
     }
         
     public void addListeners(EmergenteController controller)
